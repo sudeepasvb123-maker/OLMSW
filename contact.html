@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - O/L Mathematics by Sudeepa Wishva</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#3b82f6',
+                            secondary: '#8b5cf6',
+                            accent: '#f43f5e',
+                            success: '#22c55e'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glass-card {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow:
+                0 10px 40px -10px rgba(0, 0, 0, 0.5),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            background: rgba(30, 41, 59, 0.5);
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.6);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .math-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-dark text-white font-sans antialiased min-h-screen flex flex-col relative">
+
+    <!-- Math Background -->
+    <div class="math-bg"></div>
+
+    <!-- Back Button -->
+    <a href="index.html"
+        class="fixed top-6 left-6 text-white/50 hover:text-white transition-colors duration-300 z-50 flex items-center gap-2 group bg-black/20 p-2 rounded-full backdrop-blur-sm">
+        <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+        <span>Back to Home</span>
+    </a>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col items-center justify-center p-4 py-20 relative overflow-hidden">
+
+        <!-- Background Glows -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-primary/10 rounded-full blur-[100px] -z-10"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-accent/10 rounded-full blur-[100px] -z-10"></div>
+
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-fade-in-up">
+            <h1
+                class="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+                Get in Touch
+            </h1>
+            <p class="text-gray-400 text-lg">
+                Have questions about classes? Need help with enrollment? <br class="hidden md:block">
+                Choose your preferred way to contact Mr. Sudeepa Wishva.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl px-4 animate-fade-in-up"
+            style="animation-delay: 0.2s;">
+
+            <!-- WhatsApp (Primary) -->
+            <a href="https://wa.me/94702279805" target="_blank"
+                class="glass-card md:col-span-2 p-8 rounded-3xl flex flex-col md:flex-row items-center gap-6 group border-brand-success/20 hover:border-brand-success/50 hover:shadow-lg hover:shadow-brand-success/10">
+                <div
+                    class="w-16 h-16 bg-brand-success/20 text-brand-success rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="text-center md:text-left flex-grow">
+                    <h3 class="text-2xl font-bold text-white mb-1">WhatsApp</h3>
+                    <p class="text-gray-400 text-sm">Best for quick inquiries & class details</p>
+                </div>
+                <div class="text-brand-success font-mono text-xl font-bold bg-brand-success/10 px-4 py-2 rounded-lg">
+                    070 227 9805
+                </div>
+                <i
+                    class="fa-solid fa-arrow-right text-gray-500 group-hover:text-white group-hover:translate-x-2 transition-all"></i>
+            </a>
+
+            <!-- Phone Call -->
+            <a href="tel:+94702279805"
+                class="glass-card p-6 rounded-3xl flex flex-col items-center text-center gap-4 group">
+                <div
+                    class="w-12 h-12 bg-blue-500/20 text-blue-400 rounded-full flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-1">Call Now</h3>
+                    <p class="text-gray-400 text-sm mb-2">Available 8 AM - 8 PM</p>
+                    <p class="font-mono text-lg text-blue-300">070 227 9805</p>
+                </div>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:sudeepawishva@yahoo.com"
+                class="glass-card p-6 rounded-3xl flex flex-col items-center text-center gap-4 group">
+                <div
+                    class="w-12 h-12 bg-purple-500/20 text-purple-400 rounded-full flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-1">Send Email</h3>
+                    <p class="text-gray-400 text-sm mb-2">For formal inquiries</p>
+                    <p class="font-mono text-sm md:text-base text-purple-300 break-all">sudeepawishva@yahoo.com</p>
+                </div>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/share/186TDsws12/" target="_blank"
+                class="glass-card p-6 rounded-3xl flex flex-col items-center text-center gap-4 group hover:bg-[#1877F2]/10 hover:border-[#1877F2]/30">
+                <div
+                    class="w-12 h-12 bg-[#1877F2]/20 text-[#1877F2] rounded-full flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-1">Facebook</h3>
+                    <p class="text-gray-400 text-sm">Follow for updates</p>
+                </div>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://youtube.com/@its.sudeepa?si=YhsKdk_z_ljcT5ou" target="_blank"
+                class="glass-card p-6 rounded-3xl flex flex-col items-center text-center gap-4 group hover:bg-[#FF0000]/10 hover:border-[#FF0000]/30">
+                <div
+                    class="w-12 h-12 bg-[#FF0000]/20 text-[#FF0000] rounded-full flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-1">YouTube</h3>
+                    <p class="text-gray-400 text-sm">Watch free lessons</p>
+                </div>
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- Footer with Copyright -->
+    <footer
+        class="w-full text-center py-6 text-gray-500 text-xs border-t border-white/5 bg-brand-dark/50 backdrop-blur-sm z-10">
+        &copy; 2026 O/L Mathematics by Sudeepa Wishva. All rights reserved.
+    </footer>
+
+    <script>
+        const symbols = ['+', '-', '×', '÷', '∑', '∫', 'π', '√', '%', '∞', '≈', '≠', 'Ω', 'β'];
+        const container = document.querySelector('.math-bg');
+
+        for (let i = 0; i < 50; i++) {
+            const span = document.createElement('span');
+            span.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+            span.className = 'absolute text-brand-secondary/20 font-bold select-none blur-[1px]';
+            span.style.fontSize = `${Math.random() * 5 + 2}rem`;
+            span.style.left = `${Math.random() * 100}%`;
+            span.style.top = `${Math.random() * 100}%`;
+            span.style.opacity = Math.random() * 0.4 + 0.1;
+            const duration = Math.random() * 15 + 10;
+            const delay = Math.random() * 5;
+            span.style.animation = `float ${duration}s ease-in-out ${delay}s infinite alternate`;
+            container.appendChild(span);
+        }
+    </script>
+</body>
+
+</html>

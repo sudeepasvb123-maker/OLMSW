@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Tutor - O/L Mathematics by Sudeepa Wishva</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#3b82f6',
+                            secondary: '#8b5cf6',
+                            accent: '#f43f5e'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.5),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+
+        /* Floating Icons */
+        .math-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-brand-dark text-white font-sans antialiased min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
+
+    <!-- Math Background -->
+    <div class="math-bg"></div>
+
+    <!-- Back Button -->
+    <a href="index.html"
+        class="fixed top-6 left-6 text-white/50 hover:text-white transition-colors duration-300 z-50 flex items-center gap-2 group">
+        <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+        <span>Back to Home</span>
+    </a>
+
+    <div
+        class="glass-panel p-8 md:p-12 rounded-3xl max-w-lg w-full text-center relative overflow-hidden animate-fade-in">
+
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-primary/20 rounded-full blur-[80px] -z-10"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-secondary/20 rounded-full blur-[80px] -z-10"></div>
+
+        <!-- Tutor Image -->
+        <div class="relative w-48 h-48 mx-auto mb-8 group">
+            <div
+                class="absolute inset-0 bg-gradient-to-tr from-brand-primary to-brand-secondary rounded-full blur opacity-75 group-hover:opacity-100 transition duration-500 animate-pulse">
+            </div>
+            <img src="./tutor.png" alt="Mr. Sudeepa Wishva"
+                class="relative w-full h-full object-cover rounded-full border-4 border-white/10 shadow-2xl">
+        </div>
+
+        <!-- Name -->
+        <h1
+            class="text-3xl md:text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+            Mr. Sudeepa Wishva
+        </h1>
+
+        <!-- Qualifications -->
+        <div class="mt-4 mb-8 space-y-3">
+            <div
+                class="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-gradient-to-r from-brand-secondary/20 to-brand-primary/20 border border-white/10 shadow-lg backdrop-blur-sm transform hover:scale-105 transition-transform duration-300">
+                <div class="p-2 bg-brand-secondary/30 rounded-full">
+                    <i class="fa-solid fa-graduation-cap text-brand-secondary text-lg"></i>
+                </div>
+                <div class="text-left">
+                    <p class="text-xs text-brand-secondary uppercase tracking-widest font-bold">Qualification</p>
+                    <p class="text-white font-medium text-sm md:text-base">BSc Engineering (Hons.) - UG</p>
+                    <p class="text-gray-400 text-xs">University of Sri Jayewardenepura</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-10 max-w-md mx-auto">
+            "Dedicated to simplifying Mathematics. Join my classes to experience a logical and practical approach to
+            learning."
+        </p>
+
+        <!-- Social Links (Optional) -->
+        <div class="flex justify-center gap-4">
+            <a href="https://www.facebook.com/share/186TDsws12/" target="_blank"
+                class="w-10 h-10 rounded-full bg-white/5 hover:bg-brand-primary/80 flex items-center justify-center transition-colors">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://youtube.com/@its.sudeepa?si=YhsKdk_z_ljcT5ou" target="_blank"
+                class="w-10 h-10 rounded-full bg-white/5 hover:bg-red-600/80 flex items-center justify-center transition-colors">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://wa.me/94702279805" target="_blank"
+                class="w-10 h-10 rounded-full bg-white/5 hover:bg-green-600/80 flex items-center justify-center transition-colors">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+
+        <!-- Back to Home Button -->
+        <a href="index.html"
+            class="inline-flex items-center gap-2 px-8 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition-all duration-300 group hover:border-brand-primary/50 mt-8">
+            <i class="fa-solid fa-house text-brand-primary group-hover:scale-110 transition-transform"></i>
+            <span class="text-gray-300 group-hover:text-white font-medium">Back to Home</span>
+        </a>
+
+    </div>
+
+    <script>
+        const symbols = ['+', '-', '×', '÷', '∑', '∫', 'π', '√', '%', '∞', '≈', '≠', 'θ', 'Δ'];
+        const container = document.querySelector('.math-bg');
+
+        for (let i = 0; i < 50; i++) {
+            const span = document.createElement('span');
+            span.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+            span.className = 'absolute text-brand-primary/20 font-bold select-none blur-[1px]';
+            span.style.fontSize = `${Math.random() * 5 + 2}rem`;
+            span.style.opacity = Math.random() * 0.4 + 0.1;
+            span.style.left = `${Math.random() * 100}%`;
+            span.style.top = `${Math.random() * 100}%`;
+            const duration = Math.random() * 15 + 10;
+            const delay = Math.random() * 5;
+            span.style.animation = `float ${duration}s ease-in-out ${delay}s infinite alternate`;
+            container.appendChild(span);
+        }
+    </script>
+</body>
+
+</html>

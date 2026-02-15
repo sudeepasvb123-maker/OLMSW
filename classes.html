@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes - O/L Mathematics by Sudeepa Wishva</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#3b82f6',
+                            secondary: '#8b5cf6',
+                            accent: '#f43f5e',
+                            success: '#22c55e'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Floating Icons */
+        .math-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* iOS Glass Card */
+        .glass-card {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-brand-dark text-white font-sans antialiased min-h-screen relative pb-10 overflow-x-hidden">
+
+    <!-- Math Background -->
+    <div class="math-bg"></div>
+
+    <!-- Back Button -->
+    <a href="index.html"
+        class="fixed top-6 left-6 text-white/50 hover:text-white transition-colors duration-300 z-50 flex items-center gap-2 group bg-black/20 p-2 rounded-full backdrop-blur-sm">
+        <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+        <span>Back</span>
+    </a>
+
+    <div class="container mx-auto px-4 py-16 max-w-5xl">
+
+        <header class="text-center mb-12 animate-fade-in-down">
+            <h1
+                class="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+                Our Classes
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto">
+                Providing comprehensive mathematics education from Grade 6 to Ordinary Level. <br>
+                Empowering students to achieve excellence.
+            </p>
+        </header>
+
+        <!-- Classes Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 px-2">
+
+            <!-- Grade 6 -->
+            <div
+                class="glass-card group relative rounded-2xl p-6 hover:bg-white/5 transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-primary/20 overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
+                    <i class="fa-solid fa-shapes text-6xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-brand-primary mb-2">Grade 6</h3>
+                <p class="text-gray-400 text-sm mb-4">Building Strong Foundations</p>
+                <ul class="text-gray-300 text-sm space-y-2">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400 text-xs"></i> Theory
+                        & Revision</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400 text-xs"></i> Monthly
+                        Tests</li>
+                </ul>
+            </div>
+
+            <!-- Grade 7 -->
+            <div
+                class="glass-card group relative rounded-2xl p-6 hover:bg-white/5 transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-secondary/20 overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
+                    <i class="fa-solid fa-calculator text-6xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-brand-secondary mb-2">Grade 7</h3>
+                <p class="text-gray-400 text-sm mb-4">Exploring Concepts</p>
+                <ul class="text-gray-300 text-sm space-y-2">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400 text-xs"></i>
+                        Interactive Learning</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400 text-xs"></i> Paper
+                        Discussions</li>
+                </ul>
+            </div>
+
+            <!-- Grade 8 -->
+            <div
+                class="glass-card group relative rounded-2xl p-6 hover:bg-white/5 transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-accent/20 overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
+                    <i class="fa-solid fa-cube text-6xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-brand-accent mb-2">Grade 8</h3>
+                <p class="text-gray-400 text-sm mb-4">Mastering Basics</p>
+                <ul class="text-gray-300 text-sm space-y-2">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400 text-xs"></i>
+                        In-depth Theory</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400 text-xs"></i> Term
+                        Test Prep</li>
+                </ul>
+            </div>
+
+            <!-- Grade 9 -->
+            <div
+                class="glass-card group relative rounded-2xl p-6 hover:bg-white/5 transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-primary/20 overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
+                    <i class="fa-solid fa-chart-pie text-6xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-brand-primary mb-2">Grade 9</h3>
+                <p class="text-gray-400 text-sm mb-4">Pre-O/L Preparation</p>
+                <ul class="text-gray-300 text-sm space-y-2">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400 text-xs"></i> Past
+                        Paper Analysis</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400 text-xs"></i>
+                        Individual Attention</li>
+                </ul>
+            </div>
+
+            <!-- Grade 10 -->
+            <div
+                class="glass-card group relative rounded-2xl p-6 hover:bg-white/5 transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-secondary/20 overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
+                    <i class="fa-solid fa-square-root-variable text-6xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-brand-secondary mb-2">Grade 10</h3>
+                <p class="text-gray-400 text-sm mb-4">O/L Syllabus Coverage</p>
+                <ul class="text-gray-300 text-sm space-y-2">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400 text-xs"></i>
+                        Comprehensive Structure</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400 text-xs"></i> Model
+                        Papers</li>
+                </ul>
+            </div>
+
+            <!-- Grade 11 -->
+            <div
+                class="glass-card group relative rounded-2xl p-6 hover:bg-white/5 transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-accent/20 overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
+                    <i class="fa-solid fa-graduation-cap text-6xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-brand-accent mb-2">Grade 11</h3>
+                <p class="text-gray-400 text-sm mb-4">Final Exam Focus</p>
+                <ul class="text-gray-300 text-sm space-y-2">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400 text-xs"></i> Intense
+                        Revision</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400 text-xs"></i> Target
+                        Questions</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Contact Section -->
+        <div
+            class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 md:p-12 text-center border border-white/5 shadow-2xl relative overflow-hidden">
+            <!-- Decorative Glow -->
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-brand-primary/5 blur-3xl rounded-full pointer-events-none">
+            </div>
+
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">Want to Join a Class?</h2>
+            <p class="text-gray-400 mb-8 max-w-xl mx-auto">
+                Contact Mr. Sudeepa Wishva directly for inquiries and class schedules.
+            </p>
+
+            <!-- WhatsApp Highlight Button -->
+            <a href="https://wa.me/94702279805" target="_blank"
+                class="inline-flex items-center gap-3 px-8 py-4 bg-green-600 hover:bg-green-500 text-white rounded-full font-bold text-lg shadow-lg hover:shadow-green-500/30 transition-all duration-300 transform hover:-translate-y-1 mb-8 animate-pulse">
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                <span>Chat on WhatsApp</span>
+            </a>
+
+            <!-- Other Contact Methods -->
+            <div class="flex flex-wrap justify-center items-center gap-6 text-sm md:text-base">
+
+                <!-- Email -->
+                <a href="mailto:sudeepawishva@yahoo.com"
+                    class="flex items-center justify-center gap-2 text-gray-300 hover:text-white transition-colors bg-white/5 px-6 py-3 rounded-xl border border-white/5 hover:border-white/20 w-full md:w-auto">
+                    <i class="fa-solid fa-envelope text-brand-primary"></i>
+                    <span>sudeepawishva@yahoo.com</span>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/share/186TDsws12/" target="_blank"
+                    class="flex items-center justify-center gap-2 text-gray-300 hover:text-blue-400 transition-colors bg-white/5 px-6 py-3 rounded-xl border border-white/5 hover:border-blue-400/30 w-full md:w-auto">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+
+                <!-- YouTube -->
+                <a href="https://youtube.com/@its.sudeepa?si=YhsKdk_z_ljcT5ou" target="_blank"
+                    class="flex items-center justify-center gap-2 text-gray-300 hover:text-red-400 transition-colors bg-white/5 px-6 py-3 rounded-xl border border-white/5 hover:border-red-400/30 w-full md:w-auto">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full text-center py-6 text-gray-500 text-xs mt-auto border-t border-white/5">
+        &copy; 2026 O/L Mathematics by Sudeepa Wishva. All rights reserved.
+    </footer>
+
+    <script>
+        const symbols = ['+', '-', '×', '÷', '∑', '∫', 'π', '√', '%', '∞', '≈', '≠', 'sin', 'cos'];
+        const container = document.querySelector('.math-bg');
+
+        for (let i = 0; i < 50; i++) {
+            const span = document.createElement('span');
+            span.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+            span.className = 'absolute text-brand-primary/20 font-bold select-none blur-[1px]';
+            span.style.fontSize = `${Math.random() * 5 + 2}rem`;
+            span.style.left = `${Math.random() * 100}%`;
+            span.style.top = `${Math.random() * 100}%`;
+            span.style.opacity = Math.random() * 0.4 + 0.1;
+            const duration = Math.random() * 20 + 10;
+            const delay = Math.random() * 5;
+            span.style.animation = `float ${duration}s ease-in-out ${delay}s infinite alternate`;
+            container.appendChild(span);
+        }
+    </script>
+</body>
+
+</html>
